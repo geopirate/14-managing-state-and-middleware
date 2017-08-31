@@ -4,7 +4,9 @@ var app = app || {};
 (function(module) {
   const newArticle = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  //This function shows the tab-conent and hides the export- field
+  //this function only lives here in newArticle
   newArticle.initNewArticlePage = function() {
     $('.tab-content').show();
     $('#export-field').hide();

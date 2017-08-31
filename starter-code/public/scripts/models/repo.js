@@ -5,7 +5,7 @@ var app = app || {};
   const repos = {};
   repos.all = [];
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   // this function is requesting the github repos
   // this is called from line 13 of aboutController
   // this calls an anonymous callback function in line
