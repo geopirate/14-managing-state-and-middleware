@@ -4,8 +4,10 @@ var app = app || {};
 (function(module) {
   const articleController = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-  // (put your response in a comment here)
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is a helper function that takes a value from routes.js and passes it to articleview to fill the drop downs on the page.
+  // This is called on lines 4,6, 12 and 13 of routes.js
+  // This calls articleview.index from line 53 of articleview
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
@@ -15,8 +17,10 @@ var app = app || {};
       next();
     };
 
-    // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-    // (put your response in a comment here)
+    // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+    // This take a database query and sends it to another function to grab an article
+    // This is called from line 34 of article.js
+    // This calls articleData from line 15 of this file, just above here.
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };
 
