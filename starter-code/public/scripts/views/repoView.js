@@ -18,7 +18,7 @@ var app = app || {};
     //this function renders the repos to the about ul
     //it also get called in aboutController
     ui();
-
+// 
     $('#about ul').append(
       app.repos.with('name').map(render)
     );
