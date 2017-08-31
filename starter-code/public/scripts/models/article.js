@@ -22,8 +22,9 @@ var app = app || {};
     Article.all = rows.map(ele => new Article(ele));
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
   //This function is fetching all the articles. Its called in articleController as middleware for displaying articles.
+  // It's calling the loadAll function from line 48 of articleController
   Article.fetchAll = callback => {
     $.get('/articles')
     .then(
@@ -58,7 +59,10 @@ var app = app || {};
                       }, []);
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is counting the number of words written by an author
+  // IT is called from line 9 of adminView
+  // It's not calling any other functions
   Article.numWordsByAuthor = () => {
     return Article.allAuthors().map(author => {
       return {
@@ -78,7 +82,10 @@ var app = app || {};
     }
   };
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is deleting all of the rows of the table without deleting the structure of the table
+  // This is not called anywhere
+  // It's calling an anymouus callback function
   Article.truncateTable = callback => {
     $.ajax({
       url: '/articles',
